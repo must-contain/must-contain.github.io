@@ -1,0 +1,4 @@
+title: Your Password Must Contain Generator
+baseurl: ""
+
+exclude: [Gemfile, Gemfile.lock, vendor]
