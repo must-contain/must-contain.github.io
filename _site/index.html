@@ -21,6 +21,8 @@
 
   function loadDrawAndEnable () {
     more.disabled = true;
+    var oldMoreText = more.textContent;
+    more.textContent = '...';
 
     // FIXME: Do this with the actual library
     var request = new XMLHttpRequest();
@@ -38,6 +40,7 @@
         }
 
         more.disabled = false;
+        more.textContent = oldMoreText;
       }
     };
 

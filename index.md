@@ -3,7 +3,7 @@ title: Your Password Must Contain Generator
 layout: page
 ---
 
-{% include 'example.html' %}
+{% include example.html %}
 
 **`must-contain`** is a web API that generates sentences of the form shown above, informing you
 about ridiculous things that your password must contain.
