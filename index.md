@@ -3,44 +3,7 @@ title: Your Password Must Contain Generator
 layout: page
 ---
 
-<div>
-  <ul id="must-contain-examples"></ul>
-  <button id="must-contain-more">Load More</button>
-</div>
-
-<script>
-  var ul = document.getElementById('must-contain-examples');
-  var more = document.getElementById('must-contain-more');
-
-  function loadDrawAndEnable () {
-    more.disabled = true;
-
-    // FIXME: Do this with the actual library
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://must-contain.herokuapp.com/random/en/5', true);
-
-    request.onreadystatechange = function () {
-      if (this.readyState === 4) {
-        if (this.status >= 200 && this.status < 400) {
-          // Success!
-          var data = JSON.parse(this.responseText);
-
-          ul.innerHTML = '<li>' + data.join('</li><li>') + '</li>';
-        } else {
-          ul.innerHTML = '<li>ERROR</li>';
-        }
-
-        more.disabled = false;
-      }
-    };
-
-    request.send();
-    request = null;
-  }
-
-  more.addEventListener('click', loadDrawAndEnable);
-  document.addEventListener('DOMContentLoaded', loadDrawAndEnable);
-</script>
+{% include 'example.html' %}
 
 **`must-contain`** is a web API that generates sentences of the form shown above, informing you
 about ridiculous things that your password must contain.
