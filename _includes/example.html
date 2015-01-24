@@ -14,7 +14,7 @@
 
     // FIXME: Do this with the actual library
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://must-contain.herokuapp.com/random/en/5', true);
+    request.open('GET', 'http://must-contain.herokuapp.com/random/en/5?nc=true', true);
 
     request.onreadystatechange = function () {
       if (this.readyState === 4) {
