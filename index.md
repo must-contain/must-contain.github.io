@@ -30,10 +30,7 @@ limits are currently in place, we might add a few if we see abuse.
 
   + `lang`: The ISO code of the languge in which you need the sentences generated.
     We only support English right now, so use `en`.
-  + `num`: Number of sentences to retrieve.  Currently unlimited, but please use with
-    responsibility.  The amount of sentences that can be retrieved at any one request will never be
-    limited below 100, so if you want to be certain that your code always work, use that as a
-    maximum.
+  + `num`: Number of sentences to retrieve.  Limited to a maximum of 100.  Defaults to 5.
 
 Phrases are returned fully constructed and ready to use.  A few parameters and an option to get a
 detailed version of the sentence might be added in the future.
